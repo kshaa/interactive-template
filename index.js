@@ -60,6 +60,9 @@ const variables = await inquirer.prompt(variableInfo.variables);
 
 // Process and generate
 log(chalk.gray(`Ok, we have the answers, I'll try to copy '${srcTemplatePath}' to '${dstPath}' and embed your answers now!`));
+if (!fs.exists(srcTemplatePath)) {
+    throw new OperationalError({ title: `The '${srcTemplatePath}' folder doesn't exist`});
+}
 fs.copy(srcTemplatePath, dstPath); // copy src -> dst
 
 const relativeTemplatePaths = fs.list(dstPath); // find templates
@@ -90,7 +93,7 @@ const indexCatchAll = async (flags) => {
 }
 
 // Compatibility - import or run standalone
-module.exports = index;
+module.interactiveTemplate = index;
 
 if (require.main === module) {
     indexCatchAll({

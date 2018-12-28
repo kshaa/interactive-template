@@ -6,6 +6,7 @@
   "bin": {
     "interactive-template": "./index.js"
   },
+  "preferGlobal": "true",
   "author": "Kshaa",
   "license": "ISC",
   "dependencies": {

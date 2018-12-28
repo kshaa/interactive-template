@@ -1,0 +1,19 @@
+{
+  "name": "interactive-template",
+  "version": "1.0.0",
+  "description": "interactive templating",
+  "main": "index.js",
+  "bin": {
+    "interactive-template": "./index.js"
+  },
+  "author": "Kshaa",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "error": "^7.0.2",
+    "fs-jetpack": "^2.2.0",
+    "inquirer": "^6.2.1",
+    "mustache": "^3.0.1",
+    "node-flag": "^1.5.1"
+  }
+}

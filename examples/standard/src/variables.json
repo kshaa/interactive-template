@@ -1,0 +1,7 @@
+{
+  "variables": [
+    { "type": "input", "name": "projectCode", "message": "Codename of the project [only lowercase symbols, please]" },
+    { "type": "input", "name": "awsRegion", "message": "Default AWS region code", "default": "eu-west-2" },
+    { "type": "input", "name": "awsProfile", "message": "AWS profile code", "default": "kshaa" }
+  ]
+}

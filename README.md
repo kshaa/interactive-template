@@ -35,9 +35,15 @@ interactive-template --variablesJs "./src/variables.json" --templateDir "./src/t
 See `/examples` folder to see the results of the above ^
 
 # Notes
-- Nothing is guaranteed.  
-- This code might catch fire.  
-- Nested template folder structure isn't supported.  
+- Nothing is guaranteed  
+- This code might catch fire
+    
+    
+- Nested template folder structure isn't supported  
+- Constants aren't supported  
+- Single file templating isn't supported  
+  
+  
 - A better version of this has probably already been coded by someone else  
 - Mustache.js's interpolation notation {{}} has been replaced with <%%>
 - If an error appears and it's stack seems cropped, run node w/ `--stack-trace-limit=1000`  

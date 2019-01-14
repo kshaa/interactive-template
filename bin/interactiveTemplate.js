@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const InteractiveTemplate = require('../lib/InteractiveTemplate');
 const OperationalError = require('../lib/OperationalError');
 const printHelp = require('../lib/printHelp');

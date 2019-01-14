@@ -14,11 +14,14 @@ In essence this is a wrapper for:
 
 # Usage
 See `/examples` folder for more information.
+Also see NPM page - https://www.npmjs.com/package/interactive-template
 
 #### cli (aka binary) mode
 Typical usage supposing a default file structure
 ```
 npm install -g git+https://git@github.com/kshaa/interactive-template.git#v3.0.0
+# or
+npm install -g interactive-template@3.0.0
 interactive-template
 ```
 

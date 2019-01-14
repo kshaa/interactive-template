@@ -15,7 +15,7 @@ In essence this is a wrapper for:
 # Usage
 Typical usage supposing a default file structure
 ```
-npm -g git+https://git@github.com/kshaa/interactive-template.git#v2.0.0
+npm install -g git+https://git@github.com/kshaa/interactive-template.git#v2.0.0
 interactive-template
 ```
 

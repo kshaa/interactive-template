@@ -1,0 +1,11 @@
+{
+  "name": "scripted",
+  "version": "1.0.0",
+  "description": "interactive-template programmatic usage example",
+  "main": "script.js",
+  "author": "Kshaa",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "dependencies": {
+    "interactive-template": "3.0.0"
+  }
+}

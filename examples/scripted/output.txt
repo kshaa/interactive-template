@@ -1,0 +1,13 @@
+# This is a template
+
+Interactive survey results: 
+
+Name: ted
+Surname: bundy
+Age: 40
+Fave color: yellow
+
+
+    <li>uno</li>
+    <li>dos</li>
+    <li>tres</li>

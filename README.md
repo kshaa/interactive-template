@@ -13,9 +13,12 @@ In essence this is a wrapper for:
 - fs-jetpack.js (Filesystem library)
 
 # Usage
+See `/examples` folder for more information.
+
+#### cli (aka binary) mode
 Typical usage supposing a default file structure
 ```
-npm install -g git+https://git@github.com/kshaa/interactive-template.git#v2.0.1
+npm install -g git+https://git@github.com/kshaa/interactive-template.git#v3.0.0
 interactive-template
 ```
 
@@ -24,26 +27,25 @@ Custom file structure
 interactive-template -i document.sample.txt -v variables.json -o document.txt"
 ```
 
-See `/examples` folder to see the results of the above.
+#### library (aka require) mode
+```
+const interactiveTemplate = require('interactive-template');
+
+(async () => {
+    const templateInstance = new interactiveTemplate.InteractiveTemplate({
+         constants: 'constants.json',
+         variables: 'variables.json',
+         input: 'input.txt',
+         output: 'output.txt'
+     });
+     
+    await templateInstance.initialize();
+    await templateInstance.compile();
+    await templateInstance.render();
+})()
+```
 
 # Configuration
-#### Options in library (aka require) mode
-```
-{
-    // Source of constant data for rendering templates
-    constants: './constants.json',
-    // Source of interactively generated data for rendering templates
-    variables: './variables.json',
-    // File or directory of templates
-    input: './in',
-    // File or directory of rendered templates
-    output: './out',
-    // Symbols used in templates to indicate an evaluation
-    templateTags: [ '<%', '%>' ]
-}
-```
-These are the default options, when creating a new InteractiveTemplate, you can pass overridden values.
-
 #### Flags in cli (aka binary) mode
 ```
 {
@@ -60,6 +62,23 @@ These are the default options, when creating a new InteractiveTemplate, you can 
 This is copy-pasted from code.    
 E.g to pass in the `constants` option through a flag use `--constants `, `--constant` or `-c`
 Constants and variables can be comma-seperated  
+
+#### Options in library (aka require) mode
+```
+{
+    // Source of constant data for rendering templates
+    constants: './constants.json',
+    // Source of interactively generated data for rendering templates
+    variables: './variables.json',
+    // File or directory of templates
+    input: './in',
+    // File or directory of rendered templates
+    output: './out',
+    // Symbols used in templates to indicate an evaluation
+    templateTags: [ '<%', '%>' ]
+}
+```
+These are the default options, when creating a new InteractiveTemplate, you can pass overridden values.
 
 # Notes
 - Reliablity not guaranteed   

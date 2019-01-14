@@ -27,7 +27,7 @@ interactive-template
 
 Custom file structure
 ```
-interactive-template -i document.sample.txt -v variables.json -o document.txt"
+interactive-template -i document.sample.txt -v variables.json -o document.txt
 ```
 
 #### library (aka require) mode

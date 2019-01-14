@@ -1,0 +1,8 @@
+{
+  "variables": [
+    { "type": "input", "name": "name", "message": "What's your name" },
+    { "type": "input", "name": "surname", "message": "What's your surname" },
+    { "type": "input", "name": "age", "message": "What's your age" },
+    { "type": "input", "name": "color", "message": "What's your favourite color", "default": "yellow" }
+  ]
+}

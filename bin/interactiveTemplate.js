@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-
+/**
+ * Binary entry-point
+ */
 const InteractiveTemplate = require('../lib/InteractiveTemplate');
 const OperationalError = require('../lib/OperationalError');
 const printHelp = require('../lib/printHelp');

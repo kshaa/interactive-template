@@ -1,17 +1,11 @@
 #!/usr/bin/env node
-
 /**
- * Library or binary entry-point
+ * Library entry-point
  */
-
-// Libraries
 const interactiveTemplateLib = require('./lib/InteractiveTemplate');
-const interactiveTemplateBin = require('./bin/interactiveTemplate');
+const operationalErrorLib = require('./lib/OperationalError');
 
-// Export library
-module.exports.InteractiveTemplate = interactiveTemplateLib;
-
-// Trigger binary
-if (require.main === module) {
-    interactiveTemplateBin();
-}
+module.exports = {
+    InteractiveTemplate: interactiveTemplateLib,
+    OperationalError: operationalErrorLib
+};

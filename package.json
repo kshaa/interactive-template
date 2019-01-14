@@ -1,6 +1,6 @@
 {
   "name": "interactive-template",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "interactive templating",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "author": "Kshaa",
-  "license": "ISC",
+  "license": "GNU GENERAL PUBLIC LICENSE",
   "dependencies": {
     "chalk": "^2.4.1",
     "error": "^7.0.2",

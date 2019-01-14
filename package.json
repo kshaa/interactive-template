@@ -4,14 +4,15 @@
   "description": "interactive templating",
   "main": "index.js",
   "bin": {
-    "interactive-template": "./index.js"
+    "interactive-template": "./bin/interactiveTemplate.js"
   },
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "author": "Kshaa",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",
     "error": "^7.0.2",
+    "extend": "^3.0.2",
     "fs-jetpack": "^2.2.0",
     "inquirer": "^6.2.1",
     "mustache": "^3.0.1",

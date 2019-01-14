@@ -1,8 +1,0 @@
-{
-    "profile"        : "testaccount",
-    "region"         : "eu-west-2",
-    "bucket"         : "testaccount-eu-west-2-tfstate",
-    "key"            : "${path_relative_to_include()}/terraform.tfstate",
-    "encrypt"        : true,
-    "dynamodb_table" : "sandbox-terraform-lock"
-}

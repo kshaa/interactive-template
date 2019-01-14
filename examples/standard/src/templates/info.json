@@ -1,8 +1,0 @@
-{
-    "profile"        : "<% awsProfile %>",
-    "region"         : "<% awsRegion %>",
-    "bucket"         : "<% awsProfile %>-<% awsRegion %>-tfstate",
-    "key"            : "${path_relative_to_include()}/terraform.tfstate",
-    "encrypt"        : true,
-    "dynamodb_table" : "<% projectCode %>-terraform-lock"
-}

@@ -1,0 +1,13 @@
+# This is a template
+
+<% description %>
+
+Name: <% name %>
+Surname: <% surname %>
+Age: <% age %>
+Fave color: <% color %>
+
+
+<%#uselessList%>
+    <li><%uselessVariable%></li>
+<%/uselessList%>

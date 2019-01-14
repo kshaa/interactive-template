@@ -1,49 +1,69 @@
 # Interactive template
 I just wanted to automate hardcoding variables into a boilerplate template, this script helps me do it.
 
-# Why?
-I keep copy-pasting a directory, parsing through its files and modifying some hardcoded values.
-I want to make this process prettier for myself.
+This tool can be used to:
+- Take constants from a json
+- Take variable declarations from a json
+- Interactively inquire user to provide variable values
+- Render a set of templates using constants and variables
 
-So now this hardcoding is done using a template engine (Mustache.js) and an interactive questioner (Inquirer.js).
-
-# Flags
-- variablesJs \(def: "./src/variables.json"\) - Where the variables and their descriptions will be taken from
-- templateDir \(def: "./src/templates"\) - Where the templates to be rendered will be taken from  
-- outputDir \(def: "./dst"\) - Where to put the rendered templates
-
+In essence this is a wrapper for:
+- Mustache.js (templating engine)
+- Inquirer.js (questioning library)
+- fs-jetpack.js (Filesystem library)
 
 # Usage
 Typical usage supposing a default file structure
 ```
-* Some templates exist in './src/template' *
-* Some variables from './src/variables.json will be hardcoded in templates *
-  
-npm -g git+https://git@github.com/kshaa/interactive-template.git
+npm -g git+https://git@github.com/kshaa/interactive-template.git#2.0.0
 interactive-template
-  
-* Fill out questions about variables *
-* Your answers (variables) get hardcoded in templates *
-* Rendered templates get stored in './dst' *
 ```
 
 Custom file structure
 ```
-interactive-template --variablesJs "./src/variables.json" --templateDir "./src/templates" --outputDir "./dst"
+interactive-template -i document.sample.txt -v variables.json -o document.txt"
 ```
 
-See `/examples` folder to see the results of the above ^
+See `/examples` folder to see the results of the above.
+
+# Configuration
+#### Options in library (aka require) mode
+```
+{
+    // Source of constant data for rendering templates
+    constants: './constants.json',
+    // Source of interactively generated data for rendering templates
+    variables: './variables.json',
+    // File or directory of templates
+    input: './in',
+    // File or directory of rendered templates
+    output: './out',
+    // Symbols used in templates to indicate an evaluation
+    templateTags: [ '<%', '%>' ]
+}
+```
+These are the default options, when creating a new InteractiveTemplate, you can pass overridden values.
+
+#### Flags in cli (aka binary) mode
+```
+{
+    // Source of constant data for rendering templates
+    constants: nodeFlag.get('constants') || nodeFlag.get('constant') || nodeFlag.get('c'),
+    // Source of interactively generated data for rendering templates
+    variables: nodeFlag.get('variables') || nodeFlag.get('variable') || nodeFlag.get('v'),
+    // File or directory of templates
+    input: nodeFlag.get('input') || nodeFlag.get('i'),
+    // File or directory of rendered templates
+    output: nodeFlag.get('output') || nodeFlag.get('o')
+}
+```
+This is copy-pasted from code.    
+E.g to pass in the `constants` option through a flag use `--constants `, `--constant` or `-c`
+Constants and variables can be comma-seperated  
 
 # Notes
-- Nothing is guaranteed  
-- This code might catch fire
-    
-    
-- Nested template folder structure isn't supported  
-- Constants aren't supported  
-- Single file templating isn't supported  
+- Reliablity not guaranteed   
   
-  
-- A better version of this has probably already been coded by someone else  
+    
 - Mustache.js's interpolation notation {{}} has been replaced with <%%>
 - If an error appears and it's stack seems cropped, run node w/ `--stack-trace-limit=1000`  

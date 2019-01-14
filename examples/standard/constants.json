@@ -1,0 +1,8 @@
+{
+  "description": "Interactive survey results: ",
+  "uselessList": [
+    {"uselessVariable": "uno"},
+    {"uselessVariable": "dos"},
+    {"uselessVariable": "tres"}
+  ]
+}
